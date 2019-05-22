@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .sidenav{
+      height: 100%;
+      width: 250px;
+      position:fixed;
+      color:white;
+      background-image:url('img.jpg');
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+  .list-group a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border:none;
+}
+.over{
+  position: relative;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  height:100%;
+  width:250px;
+  padding:20px;
+}
+
+#overlay1,#overlay2,#overlay3,#overlay4 {
+  position: absolute;
+  width:65px;
+  height: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index:2;
+  cursor: pointer;
+  margin-left:10%;
+  border-radius:4px;
+  text-align: center;
+}
+
+#overlay1{
+  background-color:#2ECB7D;
+}
+
+#overlay2{
+  background-color:orange;
+}
+
+#overlay3{
+  background-color:rgb(32, 135, 204);
+}
+
+#overlay4{
+  background-color:rgb(194, 44, 24);
+}
+
+.card{
+  margin-top:16%;
+
+}
+
+.card-body{
+  text-align: right;
+}
+
+    #mainbody {
+    transition: margin-left .5s;
+    padding: 0px;
+    margin-left: 250px;
+}
+
+.list-group .list-group-item{
+  padding:10px 10px;
+  text-align:left;
+  background-color: transparent;
+  font-size:15px;
+  color:white;
+}
+
+.list-group .list-group-item:hover{
+  background-color:rgba(61, 61, 61,0.8);
+  border-radius:3px;
+}
+
+.list-group  .list-group-item:focus{
+  background-color:#408C23;
+  opacity:1;
+  border-radius:3px;
+  box-shadow:0 4px 8px 0 rgba(34, 182, 133, 0.1), 0 6px 20px 0 rgba(255, 245, 245, 0.10);
+}
+
+.navbar{
+   border-bottom: 1px solid #B1B1B1;
+}
+
+.btn1{
+  background-color:white;
+  border:none;
+}
+
+.btn1:hover,#btn1:hover,#btn2:hover{
+  text-decoration:none;
+}
+.btn1:focus{
+  outline:0;
+}
+
+.cards{
+  margin-top:8%;
+  height:120px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+  text-align: center;
+}
+
+.cards p{
+ margin-top:15px;
+}
+
+.nav-link{
+  color:#313131;
+}
+
+.cards i{
+  margin-top:35px; 
+  color:orange;
+  font-size:45px;
+}
+
+.fa.fa-warning{
+  color:#e53935;
+}
+
+.fa.fa-clone{
+  color:#00acc1;
+}
+
+.fa.fa-check-circle-o{
+  color:#43a047;
+}
+#panel,#panel2 {
+  padding: 50px;
+  display: none;
+  border:1px solid black;
+}
+  </style>
+</head>
+<body style="background-color:#E7E7E7">
+  <div class="sidenav" id="sidenav">
+    <div class="over">
+      <div class="image">
+        <img src="smclogo.png" class="img img-thumbnail d-block mx-auto" style="width:100px;">
+      </div>
+      <br>
+      <div class="admin">
+        <h5 style="text-align:center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Welcome Admin</h5>
+      </div>
+        <div class="list-group" style="margin-top:10%;">
+            <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-dashboard" style="font-size:24px;padding-right:24px;"></span>Dashboard</a>
+            <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-laptop" style="font-size:24px;padding-right:24px;"></span>View Issues</a>
+            <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-edit" style="font-size:24px;padding-right:24px;"></span>Report Issues</a>
+            <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-refresh" style="font-size:24px;padding-right:24px;"></span>Change Log</a>
+            <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-area-chart" style="font-size:24px;padding-right:24px;"></span>Track Report</a>
+            <a href="#" class="list-group-item list-group-item-action"><span class="fa fa-folder-o" style="font-size:24px;padding-right:24px;"></span>Project Management</a>
+          </div>
+    </div>
+      <!-- -->
+  </div>
+  <div id="mainbody">
+      <nav class="navbar navbar-expand-md">
+          <!-- Brand -->
+          <button class="btn1" id="menubtn" style="margin-right:20px;">
+              <span style="font-size:25px;display:none;cursor:pointer;color:black" onclick="openNav()" id="btn2">&#9776; </span>
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="btn1" style="font-size:25px;color:#313131">&#9776;</a>
+          </button>
+          <a class="navbar-brand" href="#" style = "font-size:24px; color:#313131" >Dashboard</a>
+        
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline" action="">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" style="border:none;border-bottom:1px solid orange">
+                    <button class=" mr-sm-2 btn1" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> 
+            </ul>
+          </div> 
+        </nav>
+        <div class="container">
+
+          <!-- cards OPEN -->
+           <div class="row">
+             <div class="col-sm-3">
+              <div class="cards">
+                 
+                <div class="row">
+                  <div class="col">
+                      <i class="fa fa-warning"></i>
+                  </div>
+                  <div class="col">
+                    <p>Total <br>Issues</p>
+                      <h4>4545</h4>
+                    </div>
+              </div>
+
+             </div>
+             </div>
+             <div class="col-sm-3">
+                <div class="cards">
+                 
+                    <div class="row">
+                      <div class="col">
+                          <i class="fa fa-hourglass-1"></i>
+                      </div>
+                      <div class="col">
+                        <p>Pending <br> Issues</p>
+                          <h4>4545</h4>
+                        </div>
+                  </div>
+    
+                 </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="cards">
+                 
+                      <div class="row">
+                        <div class="col">
+                            <i class="fa fa-clone"></i>
+                        </div>
+                        <div class="col">
+                          <p>Reported <br>Issues</p>
+                            <h4>4545</h4>
+                          </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="cards">
+                 
+                        <div class="row">
+                          <div class="col">
+                              <i class="fa fa-check-circle-o"></i>
+                          </div>
+                          <div class="col">
+                            <p>Completed <br>Issues</p>
+                              <h4>4545</h4>
+                            </div>
+                      </div>
+        
+                     </div>
+                  </div>
+        <div>
+          </div>
+        </div>
+
+        <!-- cards CLosed -->
+        <br><br><br>
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="reports">
+              <div class="row">
+                <div class="col-sm-8">
+                    Total Reported Issues
+                </div>
+                <div class="col-sm-4">
+                    <button class="" id="flip"><i class="fa fa-warning"></i></button>
+                  </div>
+              </div>
+              <div id="panel">Hello world!</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="reports">
+                  <div class="row">
+                    <div class="col-sm-8">
+                        Timeline
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="" id="flip2"><i class="fa fa-warning"></i></button>
+                      </div>
+                  </div>
+                  <div id="panel2">Hello world!</div>
+                </div>
+            </div>
+            <!-- <div class="col-sm-8">
+              <div class="card">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>  
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+               
+              </div> -->
+              </div>
+          </div>
+
+  </div>
+</body>
+<script>
+
+var x = document.getElementById("btn1");
+var y = document.getElementById("btn2");
+  function openNav() {
+      document.getElementById('sidenav').style.width="250px";
+      document.getElementById('mainbody').style.marginLeft="250px";
+      y.style.display = "none";
+        x.style.display = "block";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById('sidenav').style.width="0px";
+  document.getElementById('mainbody').style.marginLeft="0px";
+  y.style.display = "block";
+        x.style.display = "none";
+}
+
+
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
+  });
+});
+      </script>
+</html>
